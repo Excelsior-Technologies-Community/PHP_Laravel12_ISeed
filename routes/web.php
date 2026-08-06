@@ -14,3 +14,6 @@ Route::resource('products', ProductController::class);
 Route::get('/iseed-demo', function () {
     return view('iseed-demo');
 });
+
+Route::get('/products/export', [ProductController::class, 'export'])
+    ->name('products.export');
